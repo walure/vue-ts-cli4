@@ -1,0 +1,36 @@
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.6.4",
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.6.5",
+    "css-loader": "^4.2.1",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "scss-loader": "^0.0.1",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.5",
+    "vue-property-decorator": "^8.4.2",
+    "vue-router": "^3.4.3",
+    "vue-style-loader": "^4.1.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@gfx/zopfli": "^1.0.15",
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-typescript": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "brotli-webpack-plugin": "^1.1.0",
+    "typescript": "~3.9.3",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
