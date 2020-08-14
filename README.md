@@ -1,3 +1,7 @@
+#vue-ts-cli4 构建项目  
+配置了 公共scss 变量
+打包时分包
+
 # hello-world
 
 ## Project setup
