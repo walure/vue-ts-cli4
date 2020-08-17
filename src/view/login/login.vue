@@ -2,7 +2,7 @@
   <section class="Login">
     <a-form :form="form" class="login-form" @submit="handleSubmit">
       <a-form-item>
-        <a-input v-decorator="[
+        <a-input  v-decorator="[
           'userName',
           { rules: [{ required: true, message: 'Please input your username!' }] },
         ]" placeholder="Username">

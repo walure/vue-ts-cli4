@@ -12,11 +12,15 @@ export default class Login extends Vue {
   }
 
  private handleSubmit(e:any) {
-
+ 
     e.preventDefault();
-    this.form.validateFields((err:Object, values:Object) => {
+    this.form.validateFields((err:Object, values:any) => {
         console.log(err,values)
       if (!err) {
+       this.$store.commit('setUser',{
+          userName:values.userName
+        })
+        console.log(this.$store.getters.user)
         console.log("Received values of form: ", values)
       }
     });

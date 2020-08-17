@@ -93,11 +93,19 @@ module.exports = {
                             reuseExistingChunk: true,
                             enforce: true
                         },
+                        'object-assign': {
+                            name: "chunk-object-assign",
+                            test: /[\\/]node_modules[\\/]object-assign[\\/]/,
+                            chunks: "all",
+                            priority: 3,
+                            reuseExistingChunk: true,
+                            enforce: true
+                        },
                         vue: {
                             name: "chunk-vue",
                             test: /[\\/]node_modules[\\/]vue[\\/]/,
                             chunks: "all",
-                            priority: 3,
+                            priority: 4,
                             reuseExistingChunk: true,
                             enforce: true
                         },
@@ -105,7 +113,7 @@ module.exports = {
                             name: "chunk-vue-router",
                             test: /[\\/]node_modules[\\/]vue-router[\\/]/,
                             chunks: "all",
-                            priority: 4,
+                            priority: 5,
                             reuseExistingChunk: true,
                             enforce: true
                         },
@@ -113,7 +121,7 @@ module.exports = {
                             name: "chunk-moment",
                             test: /[\\/]node_modules[\\/]moment[\\/]/,
                             chunks: "all",
-                            priority: 5,
+                            priority: 6,
                             reuseExistingChunk: true,
                             enforce: true
                         },
@@ -121,7 +129,7 @@ module.exports = {
                             name: "chunk-ant-design-vue",
                             test: /[\\/]node_modules[\\/]ant-design-vue[\\/]/,
                             chunks: "all",
-                            priority: 6,
+                            priority: 7,
                             reuseExistingChunk: true,
                             enforce: true
                         }

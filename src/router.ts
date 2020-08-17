@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Login from '@/view/login/login.vue'
-// import Register from '@/view/register/register.vue'
+import store from './store'
 
-const loadComponent =(view:any) => () => import(`@/view/${view}`) 
+const loadComponent = (view: any) => () => import(`@/view/${view}`)
 Vue.use(Router)
 
 const router = new Router({
@@ -29,10 +28,20 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-    next()
+
+    const userName = store.getters.user.userName
+    let isNext = true
+    if(userName && to.path.indexOf('login')>-1){
+        isNext= false
+    }
+    console.log(isNext)
+    if (isNext ) {
+        next()
+    }
+
 })
 router.afterEach((to, from) => {
- 
+    
 })
 
 export default router
