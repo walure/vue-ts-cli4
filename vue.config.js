@@ -93,14 +93,14 @@ module.exports = {
                             reuseExistingChunk: true,
                             enforce: true
                         },
-                        'object-assign': {
-                            name: "chunk-object-assign",
-                            test: /[\\/]node_modules[\\/]object-assign[\\/]/,
-                            chunks: "all",
-                            priority: 3,
-                            reuseExistingChunk: true,
-                            enforce: true
-                        },
+                        // 'object-assign': {
+                        //     name: "chunk-object-assign",
+                        //     test: /[\\/]node_modules[\\/]object-assign[\\/]/,
+                        //     chunks: "all",
+                        //     priority: 3,
+                        //     reuseExistingChunk: true,
+                        //     enforce: true
+                        // },
                         vue: {
                             name: "chunk-vue",
                             test: /[\\/]node_modules[\\/]vue[\\/]/,
