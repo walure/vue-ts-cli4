@@ -23,6 +23,11 @@ const router = new Router({
             path: '/register',
             name: 'register',
             component: loadComponent('register/register.vue')
+        },
+        {
+            path: '*',
+            name: '404',
+            component: loadComponent('404/404.vue')
         }
     ]
 })
@@ -32,7 +37,7 @@ router.beforeEach((to, from, next) => {
     const userName = store.getters.user.userName
     let isNext = true
     if(userName && to.path.indexOf('login')>-1){
-        isNext= false
+        isNext= false 
     }
     console.log(isNext)
     if (isNext ) {
@@ -44,4 +49,4 @@ router.afterEach((to, from) => {
     
 })
 
-export default router
+export default router 
