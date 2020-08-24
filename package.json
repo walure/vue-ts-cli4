@@ -7,12 +7,14 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "amfe-flexible": "^2.2.1",
     "ant-design-vue": "^1.6.4",
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.6.5",
     "css-loader": "^4.2.1",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
+    "postcss-pxtorem": "^5.1.1",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
     "scss-loader": "^0.0.1",

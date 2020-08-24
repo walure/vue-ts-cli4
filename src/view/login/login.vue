@@ -45,7 +45,7 @@ export default Login;
 <style scoped lang="scss">
 .Login {
   .login-form {
-    width: 300px;
+    width: 90%;
     margin: auto;
   }
   .login-form-forgot {

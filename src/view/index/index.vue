@@ -16,6 +16,7 @@ export default {
 <style lang="scss" scoped>
     .home{
         background: $bg-color;
+        font-size: 12px;
          div{
             color:$color1
         }

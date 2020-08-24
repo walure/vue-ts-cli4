@@ -273,8 +273,8 @@ export default {
 
 <style lang="scss" scoped>
     .register{
-        width: 60%;
-        min-width: 500px;
+        width: 90%;
+    
         margin: auto;
     }
 </style>

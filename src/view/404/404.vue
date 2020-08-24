@@ -1,14 +1,12 @@
 <template>
-  <div  class="n404">
+  <div class="n404">
 
-  
-      <h1>404</h1>
-      <h2>哦！你迷路了</h2>
-      <p>
-        您要查找的页面不存在。您如何到达这里是一个谜。但是您可以单击下面的按钮以返回首页。
-      </p>
-
-        <router-link to="/" class="btn green">首页</router-link>
+    <h1>404</h1>
+    <h2>哦！你迷路了</h2>
+    <p>
+      您要查找的页面不存在。您如何到达这里是一个谜。但是您可以单击下面的按钮以返回首页。
+    </p>
+    <router-link to="/" class="btn green">首页</router-link>
     <div id="svgContainer"></div>
   </div>
 
@@ -37,16 +35,18 @@ export default class n404 extends Vue {
 </script>
 
 <style scoped lang="scss">
-
-  $blue: #0e0620;
-  $white: #fff;
-  $green: #2ccf6d;
-.n404{
-    user-select: none;
-    overflow: hidden;
+$blue: #0e0620;
+$white: #fff;
+$green: #2ccf6d;
+.n404 {
+  width: 90%;
+  margin: auto;
+  user-select: none;
+  overflow: hidden;
+  font-size: 12px;
 }
 h1 {
-  font-size: 7.5em;
+  font-size: 34px;
   margin: 15px 0px;
   font-weight: bold;
   color: $green;
@@ -54,6 +54,7 @@ h1 {
 
 h2 {
   font-weight: bold;
+  font-size: 20px;
 }
 
 .btn {
@@ -64,7 +65,7 @@ h2 {
   padding: 8px 50px;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 14px;
   letter-spacing: 2px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -100,13 +101,9 @@ h2 {
 }
 
 #svgContainer {
-  width: 640px;
-  height: 512px;
+  width: 300px;
   background-color: white;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+
+  margin: 20px auto;
 }
 </style>
