@@ -1,8 +1,9 @@
 <template>
   <div>
-    <Search>
+    <Search v-if="isShow">
       <a-table :columns="columns" :data-source="data" slot="result">
-        <a slot="name" slot-scope="text">{{ text }}</a>
+        <router-link slot="name" to="/index/detail" slot-scope="text">{{ text }}</router-link>
+
         <span slot="customTitle">
           <a-icon type="smile-o" /> Name</span>
         <span slot="tags" slot-scope="tags">
@@ -19,9 +20,8 @@
             <a-icon type="down" /> </a>
         </span>
       </a-table>
-
     </Search>
-
+    <router-view v-else />
   </div>
 </template>
 <script>
@@ -89,6 +89,15 @@ export default {
       data,
       columns,
     };
+  },
+  watch:{
+
+  },
+  computed:{
+      isShow(){
+          return this.$route.name == 'index'
+      }
+      
   },
 };
 </script>

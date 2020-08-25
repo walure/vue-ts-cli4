@@ -10,22 +10,26 @@ import Topbar from './topbar/topbar.vue'
 })
 
 export default class layouts extends Vue{
-    private isShow: boolean = true
+     private isShow: boolean = true
     @Watch('$route')
     routechange(){
-        console.log('111111')
-        this.isShow =this.$store.getters.user.userName ? true : false
+        this.isGO()
     }
     created(){
-      //  console.log(window.location)
-        const path = window.location.href
-        if(this.$store.getters.user.userName ){
+        this.isGO()
+    }
+
+    private isGO(){
+        const show = this.$store.getters.user.userName ? true : false
+        this.isShow = show
+        console.log(show,'-------------')
+        if(!show){
+          if(this.$route.name!='login')  this.$router.replace('/login')
+        }else{
+            const path = window.location.href
             if(path.indexOf('login')>-1 || path.indexOf('register')>-1 ){
                 this.$router.replace('/')
             }
-        }else{
-            this.isShow = false
-            this.$router.replace('login')
         }
     }
 

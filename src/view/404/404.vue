@@ -44,6 +44,7 @@ $green: #2ccf6d;
   user-select: none;
   overflow: hidden;
   font-size: 12px;
+  text-align: center;
 }
 h1 {
   font-size: 34px;
