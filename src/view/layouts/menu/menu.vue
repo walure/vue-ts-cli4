@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu">
     <a-menu mode="inline" :open-keys="openKeys" style="width: 256px" @openChange="onOpenChange" :default-selected-keys="['/index']">
       <a-menu-item key="/index" @click="linkTo">
         <a-icon type="home" />
@@ -41,3 +41,8 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+  .menu{
+    background: $white;
+  }
+</style>
