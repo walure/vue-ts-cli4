@@ -20,6 +20,7 @@ export default class Login extends Vue {
        this.$store.commit('setUser',{
           userName:values.userName
         })
+        this.$router.replace('/')
         console.log(this.$store.getters.user)
         console.log("Received values of form: ", values)
       }

@@ -44,6 +44,7 @@ export default Login;
 </script>
 <style scoped lang="scss">
 .Login {
+  margin-top: 20px;
   .login-form {
     width: 90%;
     margin: auto;
