@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import store from './store'
+import NProgress from 'nprogress' 
+
 
 const loadComponent = (view: any) => () => import(`@/view/${view}`)
 Vue.use(Router)
@@ -9,12 +10,12 @@ const router = new Router({
     //mode: 'history',
     // base:process.env.BASE_URL ,
     routes: [
-       
+
         {
             path: '/index',
             name: 'index',
             component: loadComponent('index/index.vue'),
-            children:[
+            children: [
                 {
                     path: 'detail',
                     name: 'detail',
@@ -34,7 +35,7 @@ const router = new Router({
         },
         {
             path: '/',
-            redirect:'/index',
+            redirect: '/index',
 
         },
         {
@@ -44,15 +45,20 @@ const router = new Router({
         }
     ]
 })
-
+// 个性化配置进度条外观
+NProgress.configure({
+    easing: 'ease',  // 动画方式    
+    speed: 500,  // 递增进度条的速度    
+    showSpinner: false, // 是否显示加载ico    
+    trickleSpeed: 200, // 自动递增间隔    
+    minimum: 0.3 // 初始化时的最小百分比
+})
 router.beforeEach((to, from, next) => {
-
-        next()
-  
-
+    NProgress.start();
+    next()
 })
 router.afterEach((to, from) => {
-    
+    NProgress.done()
 })
 
 export default router 

@@ -1,3 +1,8 @@
 html{
     height: auto;
 }
+
+#nprogress .bar{
+    background: $green;
+    height: 5px;
+}

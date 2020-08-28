@@ -12,7 +12,7 @@
           </a-tag>
         </span>
         <span slot="action" slot-scope="text, record">
-          <a>Invite 一 {{ record.name }}</a>
+          <a  @click="goDetail">Invite 一 {{ record.name }}</a>
           <a-divider type="vertical" />
           <a>Delete</a>
           <a-divider type="vertical" />
@@ -25,79 +25,6 @@
   </div>
 </template>
 <script>
-import Search from './search'
-const columns = [
-  {
-    dataIndex: 'name',
-    key: 'name',
-    slots: { title: 'customTitle' },
-    scopedSlots: { customRender: 'name' },
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
-  {
-    title: 'Tags',
-    key: 'tags',
-    dataIndex: 'tags',
-    scopedSlots: { customRender: 'tags' },
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    scopedSlots: { customRender: 'action' },
-  },
-];
-
-const data = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-    tags: ['nice', 'developer'],
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    tags: ['loser'],
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-  },
-];
-
-export default {
-  components: {
-    Search
-  },
-  data() {
-    return {
-      data,
-      columns,
-    };
-  },
-  watch:{
-
-  },
-  computed:{
-      isShow(){
-          return this.$route.name == 'index'
-      }
-      
-  },
-};
+import index from './index.ts'
+export default index
 </script>

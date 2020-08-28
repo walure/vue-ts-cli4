@@ -35,9 +35,7 @@ export default class n404 extends Vue {
 </script>
 
 <style scoped lang="scss">
-$blue: #0e0620;
-$white: #fff;
-$green: #2ccf6d;
+
 .n404 {
   width: 90%;
   margin: auto;
